@@ -83,7 +83,7 @@ const deleteHootById = (id) => {
   return hoot;
 };
 
-router.delete('/deleteHoot/:id([0-9,a-z,A-Z,-]{36})', (req, res) =>{
+router.delete('/deleteHoot/:id([0-9,a-z,A-Z,-]{36})', (req, res) => {
   const hoot = deleteHootById(req.params.id);
   if (!hoot) {
     const error = `id: '${req.params.id}' not found`;
